@@ -1,0 +1,3 @@
+class ideas:
+celcius converter
+days of the week
