@@ -29,7 +29,7 @@ namespace WeatherFinalProject
 
             int x_value = 0;
             int y_value = 0;
-            for (int i = 0; i <= 7; i++)
+            /*while (i <= 7)
             {
                 PictureBox display_pannel = new PictureBox();
                 display_pannel.Width = 100;
@@ -43,10 +43,43 @@ namespace WeatherFinalProject
                 //display_pannel.Location = new Point(x_value, y_value);
                 x_value += 50;
                 y_value += 50;
+                i++;
                 display_pannel.Left += 50;
                 display_pannel.Top += 50;
                 Controls.Add(display_pannel);
                 display_pannel.BringToFront();
+            }*/
+            List<PictureBox> pannels = new List<PictureBox>();
+
+            bool Mr_Booly = true;
+            for (int i = 0; i <= 7; i++) {
+                if (Mr_Booly == false)
+                {
+                    PictureBox pannel = new PictureBox
+                    {
+                        Name = "pannel" + i,
+                        Size = new Size(100, 200),
+                        Location = new Point(i * 100 + 50, 150)
+                    };
+                    pannel.ImageLocation = @"C:\Users\dzure\Documents\weather_pannel.bmp";
+                    pannels.Add(pannel);
+                }
+                else
+                {
+                    PictureBox pannel = new PictureBox
+                    {
+                        Name = "pannel" + i,
+                        Size = new Size(100, 200),
+                        Location = new Point(50, 150)
+                    };
+                    pannel.ImageLocation = @"C:\Users\dzure\Documents\weather_pannel.bmp";
+                    pannels.Add(pannel);
+                    Mr_Booly = false;
+                }
+            }
+            foreach (PictureBox p in pannels)
+            {
+                Controls.Add(p);
             }
         }
 
