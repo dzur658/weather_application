@@ -49,7 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:weather_application/weather_application-master/WeatherFinalProject/WeatherFinalProject/WeatherFinalProject.csproj
     <Compile Include="Conversion.cs" />
+=======
+>>>>>>> origin/master:WeatherFinalProject/WeatherFinalProject/WeatherFinalProject.csproj
     <Compile Include="days_of_the_week.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
