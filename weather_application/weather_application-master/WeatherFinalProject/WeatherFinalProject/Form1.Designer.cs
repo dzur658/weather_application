@@ -28,33 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBox = new System.Windows.Forms.TextBox();
+            this.converter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TextBox
+            // converter
             // 
-            this.TextBox.Location = new System.Drawing.Point(21, 12);
-            this.TextBox.Multiline = true;
-            this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(791, 510);
-            this.TextBox.TabIndex = 0;
+            this.converter.Location = new System.Drawing.Point(709, 398);
+            this.converter.Name = "converter";
+            this.converter.Size = new System.Drawing.Size(101, 33);
+            this.converter.TabIndex = 0;
+            this.converter.Text = "Convert to Celcius";
+            this.converter.UseVisualStyleBackColor = true;
+            this.converter.Click += new System.EventHandler(this.converter_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 553);
-            this.Controls.Add(this.TextBox);
+            this.ClientSize = new System.Drawing.Size(810, 431);
+            this.Controls.Add(this.converter);
             this.Name = "Form1";
             this.Text = "WeatherForecastApplication";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox TextBox;
+        private System.Windows.Forms.Button converter;
     }
 }
 
